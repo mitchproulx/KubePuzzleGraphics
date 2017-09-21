@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.kube.kubepuzzletimer.presentation.HomeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/rubiks"
+        android:id="@+id/imageView"
+        android:padding="15dp"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/timer_button"/>
+
+    <Button
+        android:id="@+id/timer_button"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_above="@+id/help_button"
+        android:layout_centerHorizontal="true"
+        android:elevation="0dp"
+        android:onClick="buttonTimerOnClick"
+        android:text="@string/timer_activity"/>
+  
+    <Button
+        android:id="@+id/stats_button"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:onClick="buttonStatsOnClick"
+        android:text="@string/stats_activity"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/timer_button"
+        android:layout_alignLeft="@+id/timer_button"
+        android:layout_alignStart="@+id/timer_button"/>
+
+    <Button
+        android:id="@+id/session_button"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:onClick="buttonSessionOnClick"
+        android:text="New Session"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/help_button"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:onClick="buttonHelpOnClick"
+        android:text="@string/help_activity"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
